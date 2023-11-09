@@ -1,0 +1,38 @@
+function MAIN
+{
+    define msg AS|fib sequence|(STR)
+    print msg
+
+    define a AS|0|(NUM)
+    define b AS|1|(NUM)
+    define c AS|0|(NUM)
+
+    define i AS|0|(NUM)
+    define inp AS|0|(STR)
+
+    function call:mainloop
+}
+
+function mainloop
+{
+    function call:tick
+}
+
+function tick
+{
+    print c
+    redefine a AS|b|
+    redefine b AS|c|
+    add a b
+    redefine c AS|MATH.OUT|
+
+    add i 1
+    redefine i AS|MATH.OUT|
+
+    is i greater_than 10
+    function call if:false:tick
+
+    input inp
+
+    end PROGRAM
+}
